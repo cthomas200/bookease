@@ -93,7 +93,8 @@ def register():
 @app.route('/api/auth/login', methods=['POST'])
 def login():
     from models import User
-    data = request.get_json()
+    #data = request.get_json()
+    data = request.get_json(silent=True)
     if not data:
         return jsonify({'message': 'No data provided'}), 400
     if not data.get('email'):
