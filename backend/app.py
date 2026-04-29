@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins["https://bookease-ju5zegshr-cthomas200s-projects.vercel.app"])
+CORS(app)
 
 # Ensure instance folder exists
 instance_path = os.path.join(os.path.dirname(__file__), 'instance')
